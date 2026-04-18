@@ -11,7 +11,7 @@
 body {
   background: #DED5CE;
   font-family: 'Cormorant Garamond', serif;
-  color: #6D725F;
+  color: #474E3D;
 }
 img { display: block; }
 
@@ -144,23 +144,24 @@ img { display: block; }
 
 .couple-photo-frame {
   position: relative;
-  width: 280px;
-  height: 360px;
+  width: 350px;
+  height: 380px;
   overflow: hidden;
   border-radius: 140px 140px 20px 20px; /* arch shape top */
-  box-shadow: 0 16px 48px rgba(109, 114, 95, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 48px rgba(71, 78, 61, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .couple-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center bottom;
+  transform: scale(1.15);
   transition: transform 0.6s ease;
 }
 
 .couple-photo-frame:hover .couple-photo {
-  transform: scale(1.04);
+  transform: scale(1.2);
 }
 .couple-photo-overlay {
   position: absolute;
@@ -173,7 +174,7 @@ img { display: block; }
 .frame-corner {
   position: absolute;
   width: 22px; height: 22px;
-  border-color: #6D725F;
+  border-color: #474E3D;
   border-style: solid;
   border-width: 0;
   z-index: 3;
@@ -202,7 +203,7 @@ img { display: block; }
 .badge-names {
   font-family: 'Allison', cursive;
   font-size: 3.6rem;
-  color: #6D725F;
+  color: #474E3D;
   line-height: 1.05;
 }
 .badge-date {
@@ -268,7 +269,7 @@ img { display: block; }
 .verse-title {
   font-family: 'Allison', cursive;
   font-size: 3.2rem;
-  color: #6D725F;
+  color: #474E3D;
   margin-bottom: 8px;
   font-weight: 400; /* No bold */
 }
@@ -281,7 +282,7 @@ img { display: block; }
 
 /* ── Calendar ── */
 .calendar-card {
-  background: #6D725F;
+  background: #474E3D;
   border-radius: 14px;
   box-shadow: 0 8px 36px rgba(26, 60, 52, 0.15);
   padding: 18px 14px 14px;
@@ -422,7 +423,7 @@ img { display: block; }
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   font-weight: 500;
-  color: #6D725F;
+  color: #474E3D;
   line-height: 1;
 }
 
@@ -469,7 +470,7 @@ img { display: block; }
 .location-title {
   font-family: 'Allison', cursive;
   font-size: 4rem;
-  color: #6D725F;
+  color: #474E3D;
   text-align: center; margin-bottom: 30px;
   position: relative; z-index: 2;
   font-weight: 400;
@@ -501,8 +502,8 @@ img { display: block; }
   position: relative;
   background: #fff;
   padding: 4px;
-  border: 1px solid rgba(109, 114, 95, 0.12);
-  box-shadow: 0 8px 24px rgba(109, 114, 95, 0.08);
+  border: 1px solid rgba(71, 78, 61, 0.12);
+  box-shadow: 0 8px 24px rgba(71, 78, 61, 0.08);
   border-radius: 80px 80px 6px 6px; /* Arch shape matching hero */
   overflow: hidden;
   transition: all 0.5s ease;
@@ -534,7 +535,7 @@ img { display: block; }
   transform: translateY(-8px) scale(1.03);
   z-index: 10;
   opacity: 1;
-  box-shadow: 0 12px 30px rgba(109, 114, 95, 0.15);
+  box-shadow: 0 12px 30px rgba(71, 78, 61, 0.15);
 }
 
 .location-card-container {
@@ -554,8 +555,8 @@ img { display: block; }
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid rgba(109, 114, 95, 0.08);
-  box-shadow: 0 4px 25px rgba(109, 114, 95, 0.04);
+  border: 1px solid rgba(71, 78, 61, 0.08);
+  box-shadow: 0 4px 25px rgba(71, 78, 61, 0.04);
 }
 
 .location-card.active {
@@ -580,7 +581,7 @@ img { display: block; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #6D725F;
+  color: #474E3D;
   transition: all 0.3s ease;
   z-index: 10;
   position: absolute;
@@ -589,7 +590,7 @@ img { display: block; }
 }
 
 .carousel-btn:hover {
-  background: #6D725F;
+  background: #474E3D;
   color: #fff;
   transform: translateY(-50%) scale(1.1);
 }
@@ -629,7 +630,7 @@ img { display: block; }
 .venue-type {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem; font-weight: 600;
-  color: #6D725F;
+  color: #474E3D;
   line-height: 1.3;
 }
 .venue-sublabel {
@@ -650,19 +651,19 @@ img { display: block; }
 }
 .venue-datetime {
   display: flex; flex-direction: column; gap: 5px;
-  font-size: 0.92rem; color: #6D725F;
+  font-size: 0.92rem; color: #474E3D;
   font-style: normal;
 }
 .venue-map-btn {
   display: inline-flex; align-items: center; gap: 8px;
-  background: #6D725F; color: #fff;
+  background: #474E3D; color: #fff;
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.9rem; letter-spacing: 0.05em;
   padding: 12px 24px; border-radius: 4px;
   text-decoration: none; width: fit-content;
   margin-top: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(109, 114, 95, 0.15);
+  box-shadow: 0 4px 12px rgba(71, 78, 61, 0.15);
 }
 
 /* ═══════════════════════════════════════════
@@ -686,7 +687,7 @@ img { display: block; }
 }
 .rsvp-title {
   font-family: 'Allison', cursive;
-  font-size: 3.2rem; color: #6D725F;
+  font-size: 3.2rem; color: #474E3D;
   text-align: center; margin-bottom: 6px;
   position: relative; z-index: 2;
 }
@@ -701,7 +702,7 @@ img { display: block; }
 .rsvp-field > label:first-child {
   font-family: 'Playfair Display', serif;
   font-size: 0.8rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: #6D725F;
+  text-transform: uppercase; color: #474E3D;
 }
 .rsvp-field input[type="text"] {
   border: none; border-bottom: 1.5px solid #A76443;
@@ -710,20 +711,20 @@ img { display: block; }
   font-size: 1.05rem; color: #2a1a1a; outline: none;
   transition: border-color 0.25s;
 }
-.rsvp-field input[type="text"]:focus { border-color: #6D725F; }
-.rsvp-field input[type="text"]::placeholder { color: rgba(109, 114, 95, 0.4); font-style: italic; }
+.rsvp-field input[type="text"]:focus { border-color: #474E3D; }
+.rsvp-field input[type="text"]::placeholder { color: rgba(71, 78, 61, 0.4); font-style: italic; }
 .rsvp-radio {
   display: flex; align-items: center; gap: 10px;
   font-size: 0.95rem; color: #4a2530; cursor: pointer; padding: 4px 0;
   transition: color 0.2s;
 }
-.rsvp-radio:hover { color: #6D725F; }
-.rsvp-radio input[type="radio"] { accent-color: #6D725F; width: 16px; height: 16px; cursor: pointer; }
+.rsvp-radio:hover { color: #474E3D; }
+.rsvp-radio input[type="radio"] { accent-color: #474E3D; width: 16px; height: 16px; cursor: pointer; }
 .rsvp-error { font-size: 0.85rem; color: #c0392b; font-style: italic; text-align: center; }
 .rsvp-submit {
   align-self: center;
-  background: transparent; border: 1.5px solid #6D725F;
-  color: #6D725F;
+  background: transparent; border: 1.5px solid #474E3D;
+  color: #474E3D;
   font-family: 'Playfair Display', serif;
   font-size: 0.88rem; letter-spacing: 0.22em;
   text-transform: uppercase; padding: 13px 56px;
@@ -732,9 +733,9 @@ img { display: block; }
   margin-top: 8px; position: relative; z-index: 2;
 }
 .rsvp-submit:hover:not(:disabled) {
-  background: #6D725F; color: #fff;
+  background: #474E3D; color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(109, 114, 95, 0.2);
+  box-shadow: 0 6px 20px rgba(71, 78, 61, 0.2);
 }
 .rsvp-submit:disabled { opacity: 0.38; cursor: not-allowed; }
 .rsvp-thanks {
@@ -742,7 +743,7 @@ img { display: block; }
   padding: 30px 20px;
   font-family: 'Allison', cursive;
   font-size: 2.2rem;
-  color: #6D725F;
+  color: #474E3D;
   line-height: 1.4;
   position: relative;
   z-index: 2;
@@ -761,7 +762,7 @@ img { display: block; }
    FOOTER
 ═══════════════════════════════════════════ */
 .invitation-footer {
-  background: #6D725F; padding: 10px 10px 10px;
+  background: #474E3D; padding: 10px 10px 10px;
   text-align: center; color: rgba(255,255,255,0.78);
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase;

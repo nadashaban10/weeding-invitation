@@ -96,7 +96,7 @@ export default function App() {
     // ─────────────────────────────────────────────────────────────────────────
     // PASTE YOUR GOOGLE SCRIPT URL HERE
     // ─────────────────────────────────────────────────────────────────────────
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQYuBUS8yV1JCLg9MtF2In4wMxT94TR9byIEwXwYNakR9bw1_VldhWb4CMgEJdFiI_zA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxekTfzqJxesAikvHwmiI4gvPj3DdHHE93OFgdCjhHN1P-7SOuHsYcA0QvOhezeOza24A/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
@@ -369,8 +369,8 @@ export default function App() {
       ══════════════════════════════════════════ */}
       <footer className="invitation-footer">
         <img src="/yyy 8.png" className="footer-leaf" alt="" aria-hidden />
-        <p>Raouf & Miriam · May 1, 2026</p>
-        <p className="footer-heart">♥</p>
+        <p>Raouf & Miriam · May 1, 2026 ♥</p>
+        
       </footer>
     </div>
   );

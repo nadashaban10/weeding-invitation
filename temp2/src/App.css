@@ -517,15 +517,15 @@ img { display: block; }
 }
 
 .frame-primary {
-  width: 155px;
-  height: 200px;
+  width: 170px;
+  height: 220px;
   z-index: 2;
   animation: float 8s ease-in-out infinite;
 }
 
 .frame-secondary {
-  width: 135px;
-  height: 180px;
+  width: 170px;
+  height: 220px;
   z-index: 1;
   animation: floatR 9s ease-in-out infinite;
   opacity: 0.9;

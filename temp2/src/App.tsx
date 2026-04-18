@@ -237,7 +237,7 @@ export default function App() {
 
         <div className="location-gallery">
             <div className="gallery-frame frame-primary">
-              <img src="/location1.jpeg" alt="Venue 1" />
+              <img src="/location1.jpg" alt="Venue 1" />
             </div>
             <div className="gallery-frame frame-secondary">
               <img src="/location2.jpeg" alt="Venue 2" />

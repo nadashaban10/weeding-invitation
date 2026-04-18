@@ -274,7 +274,7 @@ export default function App() {
             </svg>
           </div>
           <div className="venue-body">
-            <p className="venue-type">White Resort Orabi</p>
+            <p className="venue-type">Golden Paradise</p>
             <p className="venue-label">Reception & Celebration</p>
             <div className="venue-divider" />
             <p className="venue-datetime">
@@ -283,7 +283,7 @@ export default function App() {
             </p>
             <a
               className="venue-map-btn"
-              href="https://maps.app.goo.gl/23rwEBe8P6U78Qc98?g_st=ic"
+              href="https://maps.app.goo.gl/jJDszffbF9oXUU2o8?g_st=iw"
               target="_blank"
               rel="noreferrer"
             >

@@ -85,9 +85,9 @@ export default function WeddingCalendar({
 
       <div className="px-6 py-6">
         <div className="grid grid-cols-7 gap-2 text-center">
-          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d) => (
+          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, idx) => (
             <div
-              key={d}
+              key={`weekday-${idx}`}
               className="text-[10px] tracking-[0.35em] uppercase text-dim"
               style={{ letterSpacing: '0.25em' }}
             >

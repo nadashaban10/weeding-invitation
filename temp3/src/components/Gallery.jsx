@@ -52,7 +52,7 @@ export default function Gallery({ images = DEFAULT_IMAGES }) {
   const next = () => scrollToIndex(Math.min(items.length - 1, active + 1))
 
   return (
-    <section id="gallery" className="py-24 px-6">
+    <section id="gallery" className="pb-10 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="divider mb-12 animate-fade-up anim-delay-1">Gallery</div>
 

@@ -13,7 +13,7 @@ export default function Footer() {
       <p className="text-[11px] tracking-[0.4em] uppercase text-dim mb-8">
         20 · 05 · 2026
       </p>
-      <p className="text-sm text-muted tracking-wide">
+      <p className="text-sm text-muted tracking-wide italic">
         With love, we cannot wait to celebrate with you.
       </p>
       <p className="text-[11px] text-dim tracking-wide mt-10">

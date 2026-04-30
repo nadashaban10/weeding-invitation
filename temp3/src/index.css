@@ -45,6 +45,10 @@
     @apply flex items-center gap-4 text-dim text-[11px] tracking-[0.3em] uppercase;
   }
 
+  .form-input::placeholder {
+    @apply italic opacity-60;
+  }
+
   .divider::before,
   .divider::after {
     content: '';
@@ -122,8 +126,8 @@
 /* Subtle paper noise (optional) */
 .noise {
   background:
-    radial-gradient(900px 520px at 10% 5%, rgba(227, 201, 140, 0.20), transparent 58%),
+    radial-gradient(900px 520px at 10% 5%, rgba(227, 201, 140, 0.50), transparent 58%),
     radial-gradient(900px 520px at 90% 12%, rgba(184, 138, 59, 0.12), transparent 58%),
-    radial-gradient(900px 520px at 50% 100%, rgba(18, 16, 14, 0.06), transparent 60%),
+    radial-gradient(900px 520px at 50% 100%, rgba(92, 81, 70, 0.06), transparent 60%),
     linear-gradient(#fbf7f0, #fbf7f0);
 }

@@ -16,24 +16,24 @@ export default function InviteGate({
 
   return (
     <div
-      className="fixed inset-0 z-[100]"
+      className="fixed inset-0 z-[100] w-full h-full"
       style={{ transition: 'opacity 700ms ease, transform 700ms ease' }}
     >
-      <div className="absolute inset-0">
+      <div className="absolute  w-full h-full">
         <img
           src={imageSrc}
           alt="Invitation cover"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover filter brightness-75"
           loading="eager"
         />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 w-full h-full"
           style={{
             background:
               'linear-gradient(180deg, rgba(18,16,14,0.35) 0%, rgba(18,16,14,0.55) 60%, rgba(18,16,14,0.75) 100%)',
           }}
         />
-        <div className="absolute inset-0 noise opacity-[0.22]" />
+        <div className="absolute inset-0 w-full h-full noise opacity-[0.22]" />
       </div>
 
       <div
@@ -58,13 +58,13 @@ export default function InviteGate({
             <img
               src={frameSrc}
               alt=""
-              className="absolute -top-10 -left-10 w-[140%] opacity-[0.25] mix-blend-screen animate-float-slow"
+              className="absolute -top-5 -left-18 w-[100%] opacity-[0.25] mix-blend-screen animate-float-slow"
               loading="lazy"
             />
           </div>
 
           <div className="p-10 sm:p-12 text-center">
-            <div className="animate-fade-in text-[10px] tracking-[0.55em] uppercase text-white/75 mb-6">
+            <div className="animate-fade-in text-[10px] tracking-[0.55em] uppercase text-white/75 mb-6 italic">
               {subtitle}
             </div>
 
@@ -113,14 +113,11 @@ export default function InviteGate({
                 }}
               />
               <span className="absolute inset-0 flex flex-col items-center justify-center">
+                 <span className="mt-1 text-[rgba(227,201,140,0.95)]">✦</span>
                 <span className="text-[10px] tracking-[0.5em] uppercase text-white/85">Open</span>
                 <span className="mt-1 text-[rgba(227,201,140,0.95)]">✦</span>
               </span>
             </button>
-
-            <div className="animate-fade-in anim-delay-5 mt-8 text-[11px] tracking-[0.25em] uppercase text-white/55">
-              Tap to enter
-            </div>
           </div>
         </div>
       </div>

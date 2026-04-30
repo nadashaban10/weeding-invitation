@@ -1,6 +1,6 @@
 export default function OurStory() {
   return (
-    <section id="story" className="py-24 px-6 animate-fade-up">
+    <section id="story" className="py-10 px-6 animate-fade-up">
       <div className="max-w-5xl mx-auto">
         <div className="divider mb-12 text-center">A Note</div>
 
@@ -40,9 +40,9 @@ export default function OurStory() {
 
             <div className="relative">
               <img
-                src="/gallery/leaf2.png"
+                src="/images/whiteflora.PNG"
                 alt="Elegant detail"
-                className="w-full h-[360px] md:h-full object-cover"
+                className="w-full h-[360px] md:h-full object-cover opacity-[0.85] filter transition-opacity duration-500"
                 loading="lazy"
               />
               <div

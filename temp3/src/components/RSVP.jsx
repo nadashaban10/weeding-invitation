@@ -26,39 +26,27 @@ export default function RSVP() {
   }
 
   return (
-    <section id="rsvp" className="py-24 px-6 max-w-xl mx-auto animate-fade-up">
+    <section id="rsvp" className="py-10 px-6 max-w-xl mx-auto animate-fade-up">
       <div className="divider mb-12">RSVP</div>
 
       {submitted ? (
         <div className="animate-scale-in">
           <div
-            className="rounded-[30px] overflow-hidden"
+            className="rounded-[30px] p-12 text-center"
             style={{
               border: '1px solid rgba(184, 138, 59, 0.18)',
               background: 'rgba(255,255,255,0.76)',
               boxShadow: '0 24px 70px rgba(18,16,14,0.10)',
             }}
           >
-            <div className="relative">
-              <img
-                src="/images/brideandgroom.jpeg"
-                alt="Bride and groom"
-                className="w-full h-[220px] object-cover"
-                loading="lazy"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(18,16,14,0.08), rgba(18,16,14,0.28))',
-                }}
-              />
-              <div className="absolute bottom-5 left-6 right-6">
-                <div className="text-[10px] tracking-[0.5em] uppercase text-white/85 mb-2">RSVP Received</div>
-                <div className="font-serif text-white" style={{ fontSize: '34px', fontWeight: 300 }}>
-                  Thank you, {form.name.split(' ')[0] || 'dear guest'}.
-                </div>
+            <div className="relative w-full">
+              <div className="mb-6 text-4xl">✨</div>
+              <div className="font-serif text-gold" style={{ fontSize: '40px', fontWeight: 300, lineHeight: 1.2 }}>
+                {form.attending === 'yes' ? "See You Soon!" : "We'll Miss You!"}
               </div>
+              <p className="text-[13px] tracking-[0.2em] uppercase text-dim mt-4 mb-8">
+                {form.attending === 'yes' ? "We have received your response." : "Thank you for letting us know."}
+              </p>
             </div>
 
             <div className="p-9 text-center">
@@ -74,7 +62,7 @@ export default function RSVP() {
                 </span>
               </div>
 
-              <p className="text-sm text-muted leading-loose">
+              <p className="text-sm text-muted leading-loose italic">
                 {form.attending === 'yes' ? (
                   <>
                     We’re honored you’ll celebrate with us. We’ll send final details closer to the date.
@@ -95,7 +83,7 @@ export default function RSVP() {
                   }}
                 >
                   <div className="text-[10px] tracking-[0.45em] uppercase text-dim mb-2">Your note</div>
-                  <div className="text-sm text-ink leading-relaxed">“{form.message.trim()}”</div>
+                  <div className="text-sm text-ink leading-relaxed italic">"{form.message.trim()}"</div>
                 </div>
               )}
 
@@ -120,21 +108,24 @@ export default function RSVP() {
         </div>
       ) : (
         <div
-          className="relative rounded-[30px] p-8 sm:p-10 animate-fade-up anim-delay-1"
+          className="relative rounded-[30px] overflow-hidden animate-fade-up anim-delay-1"
           style={{
             border: '1px solid rgba(184, 138, 59, 0.18)',
             background: 'rgba(255,255,255,0.76)',
             boxShadow: '0 24px 70px rgba(18,16,14,0.10)',
           }}
         >
-          <img
-            src="/images/vecteezy_romantic-wedding-invitation-card-with-greenery-floral_15215529.png"
-            alt=""
-            className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[130%] opacity-[0.12]"
-            loading="lazy"
-          />
+          <div className="pointer-events-none absolute inset-0">
+            <img
+              src="/images/vecteezy_romantic-wedding-invitation-card-with-greenery-floral_15215529.png"
+              alt=""
+              className="w-full h-full object-cover opacity-[0.12]"
+              loading="lazy"
+            />
+          </div>
 
-          <form onSubmit={handleSubmit} className="relative space-y-8">
+          <div className="relative p-8 sm:p-10">
+            <form onSubmit={handleSubmit} className="space-y-8">
           {/* Name + Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
@@ -240,7 +231,8 @@ export default function RSVP() {
               {loading ? 'Sending…' : 'Send RSVP'}
             </button>
           </div>
-          </form>
+            </form>
+          </div>
         </div>
       )}
     </section>

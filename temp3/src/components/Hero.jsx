@@ -46,7 +46,7 @@ export default function Hero() {
       <Petals />
 
       {/* Eyebrow */}
-      <p className="animate-fade-in anim-delay-1 text-[10px] tracking-[0.5em] uppercase text-dim mb-8">
+      <p className="animate-fade-in anim-delay-1 text-[10px] tracking-[0.5em] uppercase text-dim mb-8 italic">
         Together with their families
       </p>
 
@@ -135,21 +135,6 @@ export default function Hero() {
                 <a href={googleUrl} target="_blank" rel="noreferrer">
                   <button className="outline-btn w-full sm:w-auto">Add to Google Calendar</button>
                 </a>
-                <button
-                  className="outline-btn w-full sm:w-auto"
-                  onClick={() => {
-                    const ics = buildICS({
-                      title: 'Sophia & Oliver — Wedding',
-                      start: WEDDING_DATE,
-                      end: END_DATE,
-                      location: LOCATION,
-                      description: 'We can’t wait to celebrate with you.',
-                    })
-                    downloadICS('wedding-invitation.ics', ics)
-                  }}
-                >
-                  Download Calendar (.ics)
-                </button>
               </div>
             </div>
           </div>

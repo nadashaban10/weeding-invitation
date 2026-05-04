@@ -8,6 +8,8 @@ import RSVP from './components/RSVP'
 import Footer from './components/Footer'
 import InviteGate from './components/InviteGate'
 
+import './App.css'
+
 export default function App() {
   return (
     <div className="noise relative">

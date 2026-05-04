@@ -14,6 +14,13 @@ export default function OurStory() {
         >
           <div className="grid grid-cols-1 md:grid-cols-[1fr_420px]">
             <div className="p-10 sm:p-12 text-center md:text-left">
+              {/* Decorative top element */}
+              <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>✨</span>
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>💕</span>
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>✨</span>
+              </div>
+
               <h2 className="font-serif text-ink mb-5" style={{ fontSize: '34px', fontWeight: 300 }}>
                 With joy in our hearts…
               </h2>
@@ -22,19 +29,38 @@ export default function OurStory() {
                 of our story — your presence means the world to us.
               </p>
 
-              <blockquote
-                className="font-serif italic text-ink leading-relaxed"
-                style={{ fontSize: 'clamp(18px, 3.2vw, 28px)', fontWeight: 300 }}
-              >
-                “May our days be full of laughter, and our home full of peace.”
-              </blockquote>
-
+              {/* Quote section with decorative elements */}
+              <div className="my-8 py-6 px-6 rounded-2xl" style={{ background: 'rgba(227, 201, 140, 0.08)' }}>
+                <div className="flex justify-center gap-2 mb-4">
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>♦</span>
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>✦</span>
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>♦</span>
+                </div>
+                <blockquote
+                  className="font-serif italic text-ink leading-relaxed text-center"
+                  style={{ fontSize: 'clamp(18px, 3.2vw, 28px)', fontWeight: 300 }}
+                >
+                  "May our days be full of laughter, and our home full of peace."
+                </blockquote>
+                <div className="flex justify-center gap-2 mt-4">
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>♦</span>
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>✦</span>
+                  <span className="text-xl" style={{ color: 'rgba(184, 138, 59, 0.5)' }}>♦</span>
+                </div>
+              </div>
               <div className=" flex items-center justify-center md:justify-start gap-3">
                 <span className="h-px w-10" style={{ background: 'rgba(184,138,59,0.32)' }} />
                 <span className="text-[11px] tracking-[0.35em] uppercase text-[rgba(123,90,34,1)]">
                   Sophia &amp; Oliver
                 </span>
                 <span className="h-px w-10" style={{ background: 'rgba(184,138,59,0.32)' }} />
+              </div>
+
+              {/* Decorative bottom element */}
+              <div className="flex items-center justify-center md:justify-start gap-4 mt-6">
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>💕</span>
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>✨</span>
+                <span style={{ opacity: 0.6, fontSize: '20px' }}>💕</span>
               </div>
             </div>
 

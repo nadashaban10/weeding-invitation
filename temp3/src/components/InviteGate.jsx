@@ -54,23 +54,23 @@ export default function InviteGate({
           }}
         >
           {/* Decorative frame */}
-          <div className="pointer-events-none absolute inset-0">
+          <div className="pointer-events-none absolute inset-0 w-full h-full">
             <img
               src={frameSrc}
               alt=""
-              className="absolute -top-5 -left-18 w-[100%] opacity-[0.25] mix-blend-screen animate-float-slow"
+              className="absolute inset-2 w-full h-full object-cover opacity-[0.25] mix-blend-screen animate-float-slow"
               loading="lazy"
             />
           </div>
 
           <div className="p-10 sm:p-12 text-center">
-            <div className="animate-fade-in text-[10px] tracking-[0.55em] uppercase text-white/75 mb-6 italic">
+            <div className="animate-fade-in text-[10px] tracking-[0.55em] uppercase text-white/75 mb-6 ">
               {subtitle}
             </div>
 
             <div
-              className="animate-fade-up anim-delay-1 font-script text-white leading-none mb-5"
-              style={{ fontSize: 'clamp(54px, 10vw, 92px)' }}
+              className="animate-fade-up anim-delay-1 font-script  leading-none mb-5"
+              style={{ fontSize: 'clamp(45px, 10vw, 50px)' , color: 'rgba(241, 211, 141, 0.77)' }}
             >
               {couple}
             </div>

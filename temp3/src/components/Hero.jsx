@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-2 py-16 overflow-hidden"
       style={{
         background:
           'radial-gradient(900px 520px at 50% 0%, rgba(227, 201, 140, 0.18) 0%, transparent 65%)',

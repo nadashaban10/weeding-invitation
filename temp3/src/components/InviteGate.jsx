@@ -70,7 +70,7 @@ export default function InviteGate({
 
             <div
               className="animate-fade-up anim-delay-1 font-script  leading-none mb-5"
-              style={{ fontSize: 'clamp(45px, 10vw, 50px)' , color: 'rgba(241, 211, 141, 0.77)' }}
+              style={{ fontSize: 'clamp(45px, 10vw, 50px)' , color: 'rgba(239, 214, 157, 0.77)' }}
             >
               {couple}
             </div>

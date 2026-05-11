@@ -13,12 +13,14 @@ export default function ThemeControls() {
       <button
         type="button"
         onClick={toggleTheme}
-        className="rounded-full border border-gold/30 bg-white/80 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-ink shadow-sm backdrop-blur transition hover:bg-white dark:border-gold/25 dark:bg-teal/90 dark:text-paper dark:hover:bg-teal"
+        className="flex h-11 min-h-[44px] w-11 min-w-[44px] items-center justify-center rounded-full border border-gold/30 bg-white/80 text-xl leading-none text-ink shadow-sm backdrop-blur transition hover:bg-white sm:h-12 sm:min-h-[48px] sm:w-12 sm:min-w-[48px] sm:text-2xl dark:border-gold/25 dark:bg-teal/90 dark:text-paper dark:hover:bg-teal"
         aria-pressed={isDark}
         aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         title={isDark ? 'Light mode' : 'Dark mode'}
       >
-        {isDark ? '☀' : '☾'}
+        <span className="relative top-px" aria-hidden>
+          {isDark ? '☀' : '☾'}
+        </span>
       </button>
     </div>
   )

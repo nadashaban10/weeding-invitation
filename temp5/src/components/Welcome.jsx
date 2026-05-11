@@ -1,4 +1,5 @@
 import { COUPLE_DISPLAY } from '../constants'
+import Petals from './Petals'
 
 const HERO_IMAGE = '/images/couple.svg'
 
@@ -34,8 +35,13 @@ export default function Welcome() {
   return (
     <section
       id="timeline"
-      className="snap-panel paper-bg relative flex flex-col items-center overflow-hidden px-5 py-14 sm:px-8 sm:py-16"
+      className="snap-panel relative flex flex-col items-center overflow-hidden bg-transparent px-5 py-14 sm:px-8 sm:py-16"
     >
+      <Petals
+        count={7}
+        className="z-0 opacity-[0.42] dark:opacity-[0.32] motion-safe:animate-fade-in"
+      />
+
       <div
         className="pointer-events-none absolute -top-24 -right-24 h-[320px] w-[320px] rounded-full opacity-[0.07]"
         style={{ background: 'radial-gradient(circle, #1e3d3a, transparent 70%)' }}

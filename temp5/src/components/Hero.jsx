@@ -9,6 +9,7 @@ import {
   CALENDAR_TITLE,
   CALENDAR_DESCRIPTION,
 } from '../constants'
+import Petals from './Petals'
 
 function CountCell({ label, value }) {
   return (
@@ -39,13 +40,19 @@ export default function Hero({ imageSrc = '/images/couple.svg' }) {
   return (
     <section
       id="hero"
-      className="snap-panel paper-bg flex flex-col items-center justify-center px-5 sm:px-8 py-12 sm:py-16 relative"
+      className="snap-panel relative flex flex-col items-center justify-center bg-transparent px-5 sm:px-8 py-12 sm:py-16"
     >
-      <p className="text-[10px] tracking-[0.48em] uppercase text-teal/80 mb-6 sm:mb-8 animate-fade-in text-center dark:text-gold-light/85">
-        With gratitude · together with our families
-      </p>
+      <Petals
+        count={9}
+        className="z-0 opacity-[0.5] dark:opacity-[0.36] motion-safe:animate-fade-in"
+      />
 
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-[minmax(0,420px)_1fr] gap-10 lg:gap-14 items-center">
+      <div className="relative z-[1] flex w-full flex-col items-center justify-center">
+        <p className="text-[10px] tracking-[0.48em] uppercase text-teal/80 mb-6 sm:mb-8 animate-fade-in text-center dark:text-gold-light/85">
+          With gratitude · together with our families
+        </p>
+
+        <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-[minmax(0,420px)_1fr] gap-10 lg:gap-14 items-center">
         <div className="relative flex justify-center lg:justify-end animate-fade-up">
           <div className="relative w-full max-w-[380px]">
             <span className="frame-ornament top-0 left-0 border-t-2 border-l-2 rounded-tl-[4px]" aria-hidden />
@@ -139,9 +146,10 @@ export default function Hero({ imageSrc = '/images/couple.svg' }) {
             <WeddingCalendar date={WEDDING_DATE} label="Walima day" />
           </div>
         </div>
+        </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dim text-[10px] tracking-[0.35em] uppercase opacity-80 dark:text-paper/50">
+      <div className="absolute bottom-6 left-1/2 z-[2] -translate-x-1/2 flex flex-col items-center gap-2 text-dim text-[10px] tracking-[0.35em] uppercase opacity-80 dark:text-paper/50">
         <span>Scroll or use arrow keys</span>
         <span className="text-gold/70 text-lg leading-none motion-safe:animate-bounce">↓</span>
       </div>

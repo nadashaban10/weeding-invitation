@@ -34,7 +34,7 @@ export default function Gallery({ images = DEFAULT_IMAGES }) {
   return (
     <section
       id="gallery"
-      className="snap-panel paper-bg flex flex-col items-center justify-center px-5 sm:px-8 py-14"
+      className="snap-panel flex flex-col items-center justify-center bg-transparent px-5 sm:px-8 py-14"
     >
       <div className="w-full max-w-5xl mx-auto">
         <div className="divider mb-10 animate-fade-up">Gallery</div>

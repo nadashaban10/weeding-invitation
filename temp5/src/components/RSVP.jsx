@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { RSVP_GOOGLE_SCRIPT_URL } from '../constants'
+import Petals from './Petals'
 
 const INITIAL = {
   name: '',
@@ -54,8 +55,16 @@ export default function RSVP() {
   }
 
   return (
-    <section id="rsvp" className="snap-panel paper-bg flex flex-col items-center justify-center px-5 sm:px-8 py-14">
-      <div className="w-full max-w-xl mx-auto">
+    <section
+      id="rsvp"
+      className="snap-panel relative flex flex-col items-center justify-center overflow-hidden bg-transparent px-5 sm:px-8 py-14"
+    >
+      <Petals
+        count={6}
+        className="z-0 opacity-[0.38] dark:opacity-[0.28] motion-safe:animate-fade-in"
+      />
+
+      <div className="relative z-[1] mx-auto w-full max-w-xl">
         <div className="divider mb-10 animate-fade-up">RSVP</div>
 
         {submitted ? (

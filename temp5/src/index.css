@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: #f7f4ee;
+    color: #141210;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ebe6dd;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(30, 61, 58, 0.28);
+  }
+}
+
+@layer components {
+  .snap-root {
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .snap-panel {
+    min-height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .gold-btn {
+    @apply bg-gradient-to-r from-gold-dark via-gold to-gold-dark text-ink font-sans font-medium tracking-[0.18em] text-[11px] uppercase px-10 py-3.5 cursor-pointer transition-all duration-300 hover:opacity-90 hover:-translate-y-px border-0;
+  }
+
+  .outline-btn {
+    @apply bg-white/70 backdrop-blur border border-gold/35 text-gold-dark font-sans font-light tracking-[0.2em] text-[11px] uppercase px-7 py-2.5 cursor-pointer transition-all duration-300 hover:bg-gold/10;
+  }
+
+  .divider {
+    @apply flex items-center gap-4 text-dim text-[11px] tracking-[0.28em] uppercase;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    @apply flex-1 h-px;
+    background: linear-gradient(to right, transparent, rgba(184, 146, 74, 0.4) 50%, transparent);
+  }
+
+  .countdown-cell {
+    @apply text-center px-3 py-3 sm:px-4 sm:py-4 min-w-[64px] sm:min-w-[72px];
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(184, 146, 74, 0.22);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .countdown-cell:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(20, 18, 16, 0.08);
+  }
+
+  .form-input {
+    @apply bg-transparent w-full text-ink font-light text-sm py-[10px] px-1 outline-none transition-colors duration-300 placeholder:text-dim;
+    border: none;
+    border-bottom: 1px solid rgba(184, 146, 74, 0.45);
+    font-family: 'Jost', sans-serif;
+  }
+
+  .form-input:focus {
+    border-bottom-color: rgba(30, 61, 58, 0.55);
+  }
+
+  .rsvp-option {
+    @apply inline-block px-5 py-[10px] text-[11px] tracking-[0.14em] uppercase cursor-pointer transition-all duration-300;
+    border: 1px solid rgba(184, 146, 74, 0.42);
+    color: #7a5e28;
+    background: rgba(255, 255, 255, 0.45);
+  }
+
+  .rsvp-option.selected {
+    border-color: rgba(30, 61, 58, 0.45);
+    background: rgba(30, 61, 58, 0.08);
+    color: #1e3d3a;
+  }
+
+  .frame-ornament {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-color: rgba(184, 146, 74, 0.85);
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .anim-delay-1 {
+    animation-delay: 0.12s;
+  }
+  .anim-delay-2 {
+    animation-delay: 0.28s;
+  }
+  .anim-delay-3 {
+    animation-delay: 0.44s;
+  }
+  .anim-delay-4 {
+    animation-delay: 0.6s;
+  }
+}
+
+.paper-bg {
+  background:
+    radial-gradient(900px 480px at 12% 0%, rgba(184, 146, 74, 0.14), transparent 55%),
+    radial-gradient(700px 400px at 88% 20%, rgba(30, 61, 58, 0.08), transparent 50%),
+    linear-gradient(180deg, #f7f4ee, #ebe6dd);
+}
+
+.dark body {
+  background-color: #0f1413;
+  color: #ebe6dd;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a2220;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(184, 146, 74, 0.35);
+}
+
+.dark .paper-bg {
+  background:
+    radial-gradient(900px 480px at 12% 0%, rgba(184, 146, 74, 0.12), transparent 55%),
+    radial-gradient(700px 400px at 88% 18%, rgba(30, 61, 58, 0.35), transparent 52%),
+    linear-gradient(180deg, #141c1a, #0f1413);
+}
+
+.dark .gold-btn {
+  color: #141210;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.dark .outline-btn {
+  background-color: rgba(30, 61, 58, 0.55);
+  border-color: rgba(220, 197, 152, 0.35);
+  color: rgba(247, 244, 238, 0.95);
+}
+.dark .outline-btn:hover {
+  background-color: rgba(184, 146, 74, 0.18);
+  color: #f7f4ee;
+}
+
+.dark .divider {
+  color: rgba(232, 226, 216, 0.55);
+}
+.dark .divider::before,
+.dark .divider::after {
+  background: linear-gradient(to right, transparent, rgba(220, 197, 152, 0.35) 50%, transparent);
+}
+
+.dark .countdown-cell {
+  background: rgba(30, 61, 58, 0.55);
+  border-color: rgba(184, 146, 74, 0.28);
+  color: rgba(247, 244, 238, 0.92);
+}
+.dark .countdown-cell:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.dark .form-input {
+  color: #f7f4ee;
+  border-bottom-color: rgba(184, 146, 74, 0.4);
+}
+.dark .form-input::placeholder {
+  color: rgba(200, 192, 180, 0.5);
+}
+.dark .form-input:focus {
+  border-bottom-color: rgba(220, 197, 152, 0.55);
+}
+
+.dark .rsvp-option {
+  border-color: rgba(184, 146, 74, 0.35);
+  color: #dcc598;
+  background: rgba(30, 61, 58, 0.35);
+}
+.dark .rsvp-option.selected {
+  border-color: rgba(220, 197, 152, 0.45);
+  background: rgba(184, 146, 74, 0.12);
+  color: #f7f4ee;
+}
+
+.dark .frame-ornament {
+  border-color: rgba(184, 146, 74, 0.55);
+}
+
+/* Invite gate keeps a light “paper” panel; reset typography off app-level dark:text-paper */
+.dark .invite-gate-card {
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(184, 146, 74, 0.1);
+}

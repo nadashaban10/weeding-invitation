@@ -2,6 +2,7 @@
   "name": "wedding-invitation-temp5",
   "private": true,
   "version": "1.0.0",
+  "description": "Vite + React invite. On Vercel, set Project Root Directory to this folder (temp5).",
   "type": "module",
   "scripts": {
     "dev": "vite",
